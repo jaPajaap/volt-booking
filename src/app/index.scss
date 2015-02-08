@@ -1,0 +1,72 @@
+body {
+  background-color: hsl(0,0,90);
+}
+
+.volts {}
+
+.volt {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+
+  border-radius: 12.5%;
+  background-color: hsl(0,0,100);
+  box-shadow: 0 0 5px 5px rgba(0,0,0,.1);
+
+  cursor: pointer;
+  &:hover {
+    background-color: hsl(0, 0, 90);
+  }
+}
+
+.volt-in-use {
+  font-size: 20px;
+  color: hsl(0,0,100);
+  background-color: hsl(0,0,70);
+  &:hover {
+    background-color: hsl(0, 0, 60);
+  }
+}
+
+.volt-id {
+  font-size: 40px;
+  opacity: .4;
+}
+
+
+
+
+
+
+// lights
+.lights {
+  position: absolute;
+  right: 65px;
+  bottom: 20px;
+}
+
+.light {
+  display: inline-block;
+  margin: 5px;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: #AFE776;
+}
+
+.light-is-blinking {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes blink {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
