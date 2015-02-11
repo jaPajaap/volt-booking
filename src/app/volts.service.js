@@ -4,6 +4,9 @@ angular.module('volt')
   .service('Volts', function () {
     return {
       volts: {},
+      names: [
+        "Japie","Aimpie","Bert","Henk","Pop","Barbie","Ken","Loes","Lotje","Pul"
+      ],
       all: function() {
         return this.volts;
       },
@@ -15,7 +18,7 @@ angular.module('volt')
         for (var i = 0; i < amount; i++) {
             this.volts[i] = {
                 id: i,
-                name: i+1
+                name: this.names[i]
             };
         };
         return this.volts;

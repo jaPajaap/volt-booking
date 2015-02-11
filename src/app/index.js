@@ -22,6 +22,6 @@ angular.module('volt', ['ngTouch', 'ngRoute'])
       });
   })
   .run(function (Volts) {
-    Volts.create(15);
+    Volts.create(10);
   })
 ;
