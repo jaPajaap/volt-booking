@@ -1,16 +1,16 @@
 <div class="container">
     <ul class="volts">
-        <li class="volt" ng-class="{ 'volt-in-use': volt.inUseBy }" ng-repeat="volt in volts" ng-click="hand(volt)">
-            <span class="volt-id" ng-if="!volt.inUseBy">{{ volt.id }}</span>
-            <span class="volt-used-by" ng-if="volt.inUseBy">{{ volt.inUseBy }}</span>
+        <a class="volt" ng-class="{ 'volt-in-use': volt.user }" ng-repeat="volt in volts" href="#/handout/{{ volt.id }}">
+            <span class="volt-id" ng-if="!volt.user">{{ volt.id }}</span>
+            <span class="volt-used-by" ng-if="volt.user">{{ volt.user.name }}</span>
 
-            <ul class="lights" ng-if="!volt.inUseBy">
+            <ul class="lights" ng-if="!volt.user">
                 <li class="light light-is-blinking"></li>
                 <li class="light"></li>
                 <li class="light"></li>
                 <li class="light"></li>
             </ul>
 
-        </li>
+        </a>
     </ul>
 </div>
