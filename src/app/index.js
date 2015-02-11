@@ -11,11 +11,12 @@ angular.module('volt', ['ngTouch', 'ngRoute'])
         templateUrl: 'app/handout/form.html',
         controller: 'HandoutCtrl'
       })
+      .when('/handin/:voltId', {
+        templateUrl: 'app/handin/handin.html',
+        controller: 'HandinCtrl'
+      })
       .when('/survey', {
         templateUrl: 'app/survey/survey.html'
-      })
-      .when('/takehome', {
-        templateUrl: 'app/takehome/takehome.html'
       })
       .otherwise({
         redirectTo: '/'

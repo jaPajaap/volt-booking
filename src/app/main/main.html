@@ -1,6 +1,6 @@
 <div class="container">
     <ul class="volts">
-        <a class="volt" ng-class="{ 'volt-in-use': volt.user }" ng-repeat="volt in volts" href="#/handout/{{ volt.id }}">
+        <li class="volt" ng-class="{ 'volt-in-use': volt.user }" ng-repeat="volt in volts" ng-click="hand(volt)">
             <span class="volt-id" ng-if="!volt.user">{{ volt.name }}</span>
             <span class="volt-used-by" ng-if="volt.user">{{ volt.user.name }}</span>
 
@@ -11,6 +11,6 @@
                 <li class="light"></li>
             </ul>
 
-        </a>
+        </li>
     </ul>
 </div>

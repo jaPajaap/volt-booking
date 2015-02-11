@@ -38,7 +38,7 @@ angular.module('volt')
         return volt;
       },
       handin: function(id) {
-        var volt = this.volt[id];
+        var volt = this.volts[id];
 
         //track handin event
         analytics.track('handin', {
